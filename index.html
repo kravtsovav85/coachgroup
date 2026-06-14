@@ -41,165 +41,78 @@
         h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; line-height: 1.3; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-        /* ===== HERO ===== */
-        .hero {
-            background: var(--gradient-hero);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding: 80px 0;
-        }
-        .hero::before, .hero::after {
-            content: ''; position: absolute; border-radius: 50%; pointer-events: none;
-            background: radial-gradient(circle, rgba(201,169,110,0.15) 0%, transparent 70%);
-        }
+        .hero { background: var(--gradient-hero); min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 80px 0; }
+        .hero::before, .hero::after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; background: radial-gradient(circle, rgba(201,169,110,0.15) 0%, transparent 70%); }
         .hero::before { top: -50%; right: -20%; width: 600px; height: 600px; }
         .hero::after { bottom: -30%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(201,169,110,0.1) 0%, transparent 70%); }
         .hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; margin: 0 auto; }
-        .hero-badge {
-            display: inline-block; background: rgba(201,169,110,0.2);
-            border: 1px solid rgba(201,169,110,0.4); color: var(--accent-light);
-            padding: 8px 24px; border-radius: 50px; font-size: 0.85rem;
-            font-weight: 500; letter-spacing: 0.5px; margin-bottom: 32px; backdrop-filter: blur(10px);
-        }
+        .hero-badge { display: inline-block; background: rgba(201,169,110,0.2); border: 1px solid rgba(201,169,110,0.4); color: var(--accent-light); padding: 8px 24px; border-radius: 50px; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 32px; backdrop-filter: blur(10px); }
         .hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); color: #FFFFFF; margin-bottom: 8px; font-weight: 700; }
-        .hero-subtitle {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(1rem, 2.5vw, 1.35rem); color: var(--accent-light);
-            font-style: italic; margin-bottom: 40px; font-weight: 400;
-        }
+        .hero-subtitle { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1rem, 2.5vw, 1.35rem); color: var(--accent-light); font-style: italic; margin-bottom: 40px; font-weight: 400; }
         .hero-alternative { font-size: 0.95rem; color: rgba(255,255,255,0.6); margin-bottom: 48px; font-style: italic; }
         .hero-meta { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; }
         .hero-meta-item { text-align: center; }
         .hero-meta-item .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); margin-bottom: 6px; }
         .hero-meta-item .value { font-size: 1.05rem; color: #FFFFFF; font-weight: 600; }
-        
         .hero-leaders { display: flex; justify-content: center; gap: 24px; margin-bottom: 48px; flex-wrap: wrap; }
-        .leader-card-hero {
-            background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.12);
-            padding: 16px 24px; border-radius: var(--radius); text-align: center; min-width: 200px;
-        }
+        .leader-card-hero { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.12); padding: 16px 24px; border-radius: var(--radius); text-align: center; min-width: 200px; }
         .leader-card-hero .name { color: #FFFFFF; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; }
         .leader-card-hero .role { color: var(--accent-light); font-size: 0.8rem; }
-
         .hero-divider { width: 60px; height: 2px; background: var(--accent); margin: 0 auto 40px; }
-        .btn-primary {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: var(--gradient-accent); color: var(--text-dark);
-            padding: 18px 40px; border-radius: 50px; text-decoration: none;
-            font-weight: 600; font-size: 1.05rem; transition: all 0.3s ease;
-            box-shadow: var(--shadow-accent); border: none; cursor: pointer;
-        }
+        .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--gradient-accent); color: var(--text-dark); padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: all 0.3s ease; box-shadow: var(--shadow-accent); border: none; cursor: pointer; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,169,110,0.4); }
         .btn-primary .arrow { font-size: 1.2rem; transition: transform 0.3s ease; }
         .btn-primary:hover .arrow { transform: translateX(4px); }
 
-        /* ===== SECTIONS ===== */
         section { padding: 100px 0; }
-        .section-label {
-            display: inline-block; font-size: 0.75rem; text-transform: uppercase;
-            letter-spacing: 2px; color: var(--accent-dark); font-weight: 600; margin-bottom: 16px;
-        }
+        .section-label { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-dark); font-weight: 600; margin-bottom: 16px; }
         .section-title { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--text-dark); margin-bottom: 20px; }
         .section-subtitle { font-size: 1.1rem; color: var(--text-muted); max-width: 650px; margin: 0 auto 60px; }
         .text-center { text-align: center; }
 
-        /* ===== AUDIENCE ===== */
         .audience { background: var(--bg-white); }
         .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-        .audience-card {
-            background: var(--bg-light); border: 1px solid var(--border);
-            border-radius: var(--radius); padding: 32px 28px; transition: all 0.3s ease;
-            position: relative; overflow: hidden;
-        }
-        .audience-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-            background: var(--gradient-accent); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
-        }
+        .audience-card { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 28px; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .audience-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--gradient-accent); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
         .audience-card:hover::before { transform: scaleX(1); }
         .audience-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
         .audience-icon { font-size: 2rem; margin-bottom: 16px; }
         .audience-card h4 { font-size: 1.05rem; margin-bottom: 10px; color: var(--text-dark); font-family: 'Inter', sans-serif; font-weight: 600; }
         .audience-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* ===== LEADERS ===== */
         .leaders { background: var(--bg-light); }
         .leaders-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px; }
-        .leader-card {
-            background: var(--bg-white); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 40px; transition: all 0.3s ease;
-            position: relative; overflow: hidden;
-        }
-        .leader-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
-            background: var(--gradient-accent);
-        }
+        .leader-card { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .leader-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--gradient-accent); }
         .leader-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
         .leader-header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 24px; }
-        .leader-avatar {
-            width: 80px; height: 80px; border-radius: 50%;
-            background: var(--gradient-accent); display: flex; align-items: center; justify-content: center;
-            font-size: 1.8rem; font-weight: 700; color: var(--text-dark); flex-shrink: 0;
-            font-family: 'Playfair Display', serif; overflow: hidden;
-        }
+        .leader-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--gradient-accent); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 700; color: var(--text-dark); flex-shrink: 0; font-family: 'Playfair Display', serif; overflow: hidden; }
         .leader-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
         .leader-info h3 { font-size: 1.3rem; margin-bottom: 4px; color: var(--text-dark); }
         .leader-info .subtitle { color: var(--accent-dark); font-weight: 500; font-size: 0.95rem; margin-bottom: 8px; }
         .leader-info .credentials { font-size: 0.85rem; color: var(--text-light); font-style: italic; }
-        
         .leader-section { margin-bottom: 20px; }
-        .leader-section h4 {
-            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
-            color: var(--primary); font-weight: 700; margin-bottom: 10px; font-family: 'Inter', sans-serif;
-        }
+        .leader-section h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); font-weight: 700; margin-bottom: 10px; font-family: 'Inter', sans-serif; }
         .leader-section ul { list-style: none; padding: 0; margin: 0; }
-        .leader-section li {
-            font-size: 0.92rem; color: var(--text-muted); padding: 4px 0;
-            padding-left: 20px; position: relative; line-height: 1.6;
-        }
+        .leader-section li { font-size: 0.92rem; color: var(--text-muted); padding: 4px 0; padding-left: 20px; position: relative; line-height: 1.6; }
         .leader-section li::before { content: '•'; color: var(--accent); font-weight: 700; position: absolute; left: 0; }
         .methods-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
-        .method-tag {
-            background: rgba(201,169,110,0.12); color: var(--accent-dark);
-            padding: 4px 12px; border-radius: 50px; font-size: 0.78rem; font-weight: 500;
-        }
+        .method-tag { background: rgba(201,169,110,0.12); color: var(--accent-dark); padding: 4px 12px; border-radius: 50px; font-size: 0.78rem; font-weight: 500; }
 
-        /* ===== PROGRAM ===== */
         .program { background: var(--bg-white); }
-        .program-intro {
-            background: var(--bg-light); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 32px 40px; margin-bottom: 48px; text-align: center;
-        }
+        .program-intro { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 40px; margin-bottom: 48px; text-align: center; }
         .program-intro p { font-size: 1.05rem; color: var(--text-muted); }
         .program-intro strong { color: var(--text-dark); }
         .accordion { display: flex; flex-direction: column; gap: 12px; }
-        .accordion-item {
-            background: var(--bg-light); border: 1px solid var(--border);
-            border-radius: var(--radius); overflow: hidden; transition: all 0.3s ease;
-        }
+        .accordion-item { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: all 0.3s ease; }
         .accordion-item:hover { box-shadow: var(--shadow-sm); }
         .accordion-item.active { box-shadow: var(--shadow-md); border-color: var(--accent-light); }
-        .accordion-header {
-            padding: 24px 32px; cursor: pointer; display: flex; justify-content: space-between;
-            align-items: center; gap: 16px; user-select: none; transition: background 0.2s ease;
-        }
+        .accordion-header { padding: 24px 32px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; user-select: none; transition: background 0.2s ease; }
         .accordion-header:hover { background: rgba(201,169,110,0.04); }
         .accordion-header-left { display: flex; align-items: center; gap: 16px; }
-        .module-number {
-            background: var(--gradient-accent); color: var(--text-dark);
-            width: 44px; height: 44px; border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-size: 0.9rem; flex-shrink: 0;
-        }
+        .module-number { background: var(--gradient-accent); color: var(--text-dark); width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
         .accordion-header h3 { font-size: 1.1rem; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--text-dark); }
-        .accordion-icon {
-            width: 32px; height: 32px; border-radius: 50%; background: var(--bg-white);
-            display: flex; align-items: center; justify-content: center;
-            transition: all 0.3s ease; flex-shrink: 0; border: 1px solid var(--border);
-        }
+        .accordion-icon { width: 32px; height: 32px; border-radius: 50%; background: var(--bg-white); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; flex-shrink: 0; border: 1px solid var(--border); }
         .accordion-icon svg { width: 16px; height: 16px; stroke: var(--text-muted); transition: transform 0.3s ease; }
         .accordion-item.active .accordion-icon { background: var(--accent); }
         .accordion-item.active .accordion-icon svg { stroke: #fff; transform: rotate(180deg); }
@@ -209,77 +122,45 @@
         .meeting:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         .meeting-title { font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; font-family: 'Inter', sans-serif; }
         .meeting-date { font-size: 0.8rem; color: var(--accent-dark); font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-        .meeting-date::before { content: '📅'; }
+        .meeting-date::before { content: ''; }
         .meeting-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
         .tag { display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
         .tag-marketing { background: rgba(44,62,80,0.08); color: var(--primary); }
         .tag-psychodynamics { background: rgba(201,169,110,0.15); color: var(--accent-dark); }
         .meeting-content { font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* ===== RESULTS ===== */
         .results { background: var(--primary); color: #FFFFFF; position: relative; overflow: hidden; }
         .results::before { content: ''; position: absolute; top: 0; right: 0; width: 500px; height: 500px; background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%); pointer-events: none; }
         .results .section-label { color: var(--accent-light); }
         .results .section-title { color: #FFFFFF; }
         .results .section-subtitle { color: rgba(255,255,255,0.6); }
         .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; position: relative; z-index: 2; }
-        .result-card {
-            background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius);
-            padding: 32px 28px; transition: all 0.3s ease;
-        }
+        .result-card { background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 32px 28px; transition: all 0.3s ease; }
         .result-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
         .result-icon { font-size: 2rem; margin-bottom: 16px; }
         .result-card h4 { font-size: 1.05rem; margin-bottom: 10px; color: #FFFFFF; font-family: 'Inter', sans-serif; font-weight: 600; }
         .result-card p { font-size: 0.92rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
-        .results-highlight {
-            background: rgba(201,169,110,0.15); border: 1px solid rgba(201,169,110,0.3);
-            border-radius: var(--radius-lg); padding: 40px; margin-top: 48px; text-align: center; position: relative; z-index: 2;
-        }
+        .results-highlight { background: rgba(201,169,110,0.15); border: 1px solid rgba(201,169,110,0.3); border-radius: var(--radius-lg); padding: 40px; margin-top: 48px; text-align: center; position: relative; z-index: 2; }
         .results-highlight p { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #FFFFFF; font-style: italic; line-height: 1.7; }
 
-        /* ===== FORMAT ===== */
         .format { background: var(--bg-light); }
         .format-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-bottom: 48px; }
         .format-step { text-align: center; padding: 32px 24px; }
-        .step-number {
-            width: 56px; height: 56px; border-radius: 50%; background: var(--gradient-accent);
-            color: var(--text-dark); display: flex; align-items: center; justify-content: center;
-            font-size: 1.3rem; font-weight: 700; margin: 0 auto 20px; font-family: 'Playfair Display', serif;
-        }
+        .step-number { width: 56px; height: 56px; border-radius: 50%; background: var(--gradient-accent); color: var(--text-dark); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700; margin: 0 auto 20px; font-family: 'Playfair Display', serif; }
         .format-step h4 { font-size: 1rem; margin-bottom: 10px; color: var(--text-dark); font-family: 'Inter', sans-serif; font-weight: 600; }
         .format-step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-        .format-cta {
-            background: var(--bg-white); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 40px; text-align: center;
-            max-width: 700px; margin: 0 auto;
-        }
+        .format-cta { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px; text-align: center; max-width: 700px; margin: 0 auto; }
         .format-cta h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--text-dark); }
         .format-cta p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 24px; }
-        .btn-outline {
-            display: inline-flex; align-items: center; gap: 10px; background: transparent;
-            color: var(--accent-dark); padding: 14px 32px; border-radius: 50px;
-            text-decoration: none; font-weight: 600; font-size: 0.95rem;
-            border: 2px solid var(--accent); transition: all 0.3s ease; cursor: pointer;
-        }
+        .btn-outline { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--accent-dark); padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 2px solid var(--accent); transition: all 0.3s ease; cursor: pointer; }
         .btn-outline:hover { background: var(--accent); color: #FFFFFF; }
 
-        /* ===== PRICING ===== */
         .pricing { background: var(--bg-white); }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; align-items: start; }
-        .pricing-card {
-            background: var(--bg-light); border: 1px solid var(--border);
-            border-radius: var(--radius-lg); padding: 40px 32px; text-align: center;
-            transition: all 0.3s ease; position: relative;
-        }
+        .pricing-card { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px 32px; text-align: center; transition: all 0.3s ease; position: relative; }
         .pricing-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
         .pricing-card.featured { border: 2px solid var(--accent); box-shadow: var(--shadow-accent); }
-        .pricing-badge {
-            position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-            background: var(--gradient-accent); color: var(--text-dark);
-            padding: 6px 24px; border-radius: 50px; font-size: 0.78rem;
-            font-weight: 700; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap;
-        }
+        .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--gradient-accent); color: var(--text-dark); padding: 6px 24px; border-radius: 50px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
         .pricing-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--text-dark); font-family: 'Inter', sans-serif; font-weight: 600; }
         .pricing-card .price { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--text-dark); margin: 20px 0 8px; }
         .pricing-card .price-old { font-size: 1.1rem; color: var(--text-light); text-decoration: line-through; margin-bottom: 20px; }
@@ -290,24 +171,15 @@
         .pricing-card:not(.featured) .btn-primary { background: var(--bg-white); color: var(--text-dark); box-shadow: none; }
         .pricing-card:not(.featured) .btn-primary:hover { background: var(--primary); color: #FFFFFF; }
 
-        /* ===== CONTACTS BAR ===== */
-        .contacts-bar {
-            background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-            padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm);
-        }
+        .contacts-bar { background: var(--bg-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
         .contacts-bar .container { display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; }
-        .contact-link {
-            display: inline-flex; align-items: center; gap: 8px; color: var(--text-dark);
-            text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 8px 16px;
-            border-radius: 50px; transition: all 0.3s ease; border: 1px solid var(--border);
-        }
+        .contact-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-dark); text-decoration: none; font-weight: 500; font-size: 0.95rem; padding: 8px 16px; border-radius: 50px; transition: all 0.3s ease; border: 1px solid var(--border); }
         .contact-link:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent-dark); }
         .contact-link.telegram { color: #0088cc; border-color: #0088cc33; }
         .contact-link.telegram:hover { background: #0088cc15; }
         .contact-link.max { color: var(--accent-dark); border-color: var(--accent-light); }
         .contact-link.max:hover { background: var(--accent-light); }
 
-        /* ===== FOOTER ===== */
         .footer { background: var(--text-dark); color: rgba(255,255,255,0.6); padding: 60px 0 40px; }
         .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 32px; margin-bottom: 40px; }
         .footer-brand h3 { color: #FFFFFF; font-size: 1.3rem; margin-bottom: 8px; }
@@ -317,7 +189,6 @@
         .footer-divider { height: 1px; background: rgba(255,255,255,0.1); margin-bottom: 24px; }
         .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; }
 
-        /* ===== ANIMATIONS & RESPONSIVE ===== */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
         @media (max-width: 768px) {
@@ -360,7 +231,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">Онлайн-практикум • Старт 22 июня 2026</div>
+                <div class="hero-badge">Онлайн-практикум • Старт 30 июня 2026</div>
                 <h1>Психодинамический практикум</h1>
                 <p class="hero-subtitle">Психология и коучинг как устойчивый бизнес.<br>Интеграция прошлого опыта, профессиональная идентичность и этичные продажи.</p>
                 <p class="hero-alternative">также: «Психология (коучинг) как бизнес. Переход в новую профессию»</p>
@@ -372,9 +243,9 @@
                 <div class="hero-meta">
                     <div class="hero-meta-item"><div class="label">Формат</div><div class="value">Онлайн</div></div>
                     <div class="hero-meta-item"><div class="label">Длительность</div><div class="value">12 недель</div></div>
-                    <div class="hero-meta-item"><div class="label">Встречи</div><div class="value">Пн, 3 часа</div></div>
+                    <div class="hero-meta-item"><div class="label">Встречи</div><div class="value">Вт, 3 часа</div></div>
                 </div>
-                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 24px;">📅 22.06 → 07.09.2026 • Каждый понедельник</p>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 24px;">📅 30.06 → 15.09.2026 • Каждый вторник</p>
                 <a href="#pricing" class="btn-primary">Записаться на бесплатную диагностику <span class="arrow">→</span></a>
             </div>
         </div>
@@ -410,7 +281,6 @@
                 <div class="leader-card fade-in">
                     <div class="leader-header">
                         <div class="leader-avatar">
-                            <!-- ВСТАВЬТЕ ФОТО: замените src на путь или ссылку к файлу -->
                             <img src="alexey.jpg" alt="Алексей Кравцов" onerror="this.parentElement.innerHTML='АК'">
                         </div>
                         <div class="leader-info">
@@ -445,7 +315,6 @@
                 <div class="leader-card fade-in">
                     <div class="leader-header">
                         <div class="leader-avatar">
-                            <!-- ВСТАВЬТЕ ФОТО: замените src на путь или ссылку к файлу -->
                             <img src="anna.jpg" alt="Анна Веселова" onerror="this.parentElement.innerHTML='АВ'">
                         </div>
                         <div class="leader-info">
@@ -483,44 +352,44 @@
             <div class="text-center">
                 <div class="section-label">Программа</div>
                 <h2 class="section-title">4 модуля глубинной трансформации</h2>
-                <p class="section-subtitle">12 встреч по понедельникам: 22.06 → 07.09.2026 • 3 часа онлайн</p>
+                <p class="section-subtitle">12 встреч по вторникам: 30.06 → 15.09.2026 • 3 часа онлайн</p>
             </div>
-            <div class="program-intro fade-in"><p><strong>Формат работы:</strong> Онлайн • 12 встреч по понедельникам • 3 часа в неделю • Групповая глубинная работа + конкретные маркетинговые инструменты • Запись всех встреч</p></div>
+            <div class="program-intro fade-in"><p><strong>Формат работы:</strong> Онлайн • 12 встреч по вторникам • 3 часа в неделю • Групповая глубинная работа + конкретные маркетинговые инструменты • Запись всех встреч</p></div>
             <div class="accordion">
                 <!-- MODULE 1 -->
                 <div class="accordion-item active">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">01</div><h3>Фундамент и Идентичность</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body" style="max-height: 800px;"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 1: Постановка целей и исследование скрытых мотивов</div><div class="meeting-date">22 июня 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">SMART-цели, декомпозиция финансового и профессионального плана. Разделение истинных желаний и навязанных интроектов. Исследование страха успеха и бессознательных выгод «оставаться маленьким».</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 2: Позиционирование и синдром самозванца</div><div class="meeting-date">29 июня 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Поиск суперсилы, формулирование позиционирования. Кризис профессиональной идентичности. Работа с внутренним критиком и легализация текущего опыта.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 3: Целевая аудитория и зеркальные проекции</div><div class="meeting-date">6 июля 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Сегментация ЦА, анализ болей, CustDev. Проективная идентификация: как идеальный клиент отражает наши собственные травмы и точки роста.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 1: Постановка целей и исследование скрытых мотивов</div><div class="meeting-date">30 июня 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">SMART-цели, декомпозиция финансового и профессионального плана. Разделение истинных желаний и навязанных интроектов. Исследование страха успеха и бессознательных выгод «оставаться маленьким».</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 2: Позиционирование и синдром самозванца</div><div class="meeting-date">7 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Поиск суперсилы, формулирование позиционирования. Кризис профессиональной идентичности. Работа с внутренним критиком и легализация текущего опыта.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 3: Целевая аудитория и зеркальные проекции</div><div class="meeting-date">14 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Сегментация ЦА, анализ болей, CustDev. Бессознательный выбор клиентов: кого мы притягиваем и как это связано с нашими внутренними темами и точками роста.</div></div>
                     </div></div>
                 </div>
                 <!-- MODULE 2 -->
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">02</div><h3>Продукт, Деньги и Ценность</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 4: Продуктовая линейка и границы форматов</div><div class="meeting-date">13 июля 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Путь клиента. Создание лид-магнитов и пакетов услуг. Страх долгосрочных обязательств. Как продуктовая линейка отражает личные границы.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 5: Психология ценообразования</div><div class="meeting-date">20 июля 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Анализ рынка, расчёт стоимости часа. Стыд брать деньги за «помощь». Проработка установок бедности и убеждения «я должен спасать бесплатно».</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 6: Этичные продажи без спасательства</div><div class="meeting-date">27 июля 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Упаковка УТП. Сценарии продающих сессий без давления. Треугольник Карпмана в продажах. Переход к позиции «Взрослый–Взрослый».</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 4: Продуктовая линейка и границы форматов</div><div class="meeting-date">21 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Путь клиента. Создание лид-магнитов и пакетов услуг. Страх долгосрочных обязательств. Как продуктовая линейка отражает личные границы.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 5: Психология ценообразования</div><div class="meeting-date">28 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Анализ рынка, расчёт стоимости часа. Стыд брать деньги за «помощь». Проработка установок бедности и убеждения «я должен спасать бесплатно».</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 6: Этичные продажи без спасательства</div><div class="meeting-date">4 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Упаковка УТП. Сценарии продающих сессий без давления. Треугольник Карпмана в продажах. Переход к позиции «Взрослый–Взрослый».</div></div>
                     </div></div>
                 </div>
                 <!-- MODULE 3 -->
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">03</div><h3>Проявленность и Коммуникация</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 7: Площадки, визуал и страх видимости</div><div class="meeting-date">3 августа 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Выбор каналов продвижения. Работа с «Тенью» в публичном поле. Страх осуждения коллег. Легализация права занимать место в пространстве.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 8: Контентная стратегия и границы самораскрытия</div><div class="meeting-date">10 августа 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Матрица контента: баланс продающего, экспертного и личного. Где граница между искренностью и стриптизом? Работа со страхом уязвимости.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 9: Мероприятия, конкуренция и авторитет</div><div class="meeting-date">17 августа 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Продвижение через события и коллаборации. Проекция авторитета. Работа с завистью к коллегам. Трансформация конкуренции в партнёрство.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 7: Площадки, визуал и страх видимости</div><div class="meeting-date">11 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Выбор каналов продвижения. Работа с «Тенью» в публичном поле. Страх осуждения коллег. Легализация права занимать место в пространстве.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 8: Контентная стратегия и границы самораскрытия</div><div class="meeting-date">18 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Матрица контента: баланс продающего, экспертного и личного. Где граница между искренностью и стриптизом? Работа со страхом уязвимости.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 9: Мероприятия, конкуренция и авторитет</div><div class="meeting-date">25 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Продвижение через события и коллаборации. Проекция авторитета. Работа с завистью к коллегам. Трансформация конкуренции в партнёрство.</div></div>
                     </div></div>
                 </div>
                 <!-- MODULE 4 -->
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">04</div><h3>Устойчивость, Масштаб и Запуск</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 10: Устойчивость к критике и контейнирование</div><div class="meeting-date">24 августа 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Управление репутацией. Как справляться с хейтом. Разделение личности и интернет-образа. Навык самоподдержки при запусках.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 11: Делегирование и профилактика выгорания</div><div class="meeting-date">31 августа 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Тайм-менеджмент. Найм команды. Фантазия о всемогуществе. Вторичные выгоды выгорания. Право на отдых.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 12: Выпускной — Защита стратегий</div><div class="meeting-date">7 сентября 2026, понедельник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Презентация готовой связки: позиционирование, продукт, цены, план. Групповая обратная связь. Проживание сепарации с группой.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 10: Устойчивость к критике и контейнирование</div><div class="meeting-date">1 сентября 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Управление репутацией. Как справляться с хейтом. Разделение личности и интернет-образа. Навык самоподдержки при запусках.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 11: Делегирование и профилактика выгорания</div><div class="meeting-date">8 сентября 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Тайм-менеджмент. Найм команды. Фантазия о всемогуществе. Вторичные выгоды выгорания. Право на отдых.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 12: Выпускной — Защита стратегий</div><div class="meeting-date">15 сентября 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Презентация готовой связки: позиционирование, продукт, цены, план. Групповая обратная связь. Проживание сепарации с группой.</div></div>
                     </div></div>
                 </div>
             </div>
@@ -559,7 +428,7 @@
                 <div class="format-step fade-in"><div class="step-number">1</div><h4>Заявка</h4><p>Напишите в Telegram или Макс — выберите удобный способ связи</p></div>
                 <div class="format-step fade-in"><div class="step-number">2</div><h4>Диагностика</h4><p>20-минутная сессия с ведущими — знакомство и обсуждение запроса</p></div>
                 <div class="format-step fade-in"><div class="step-number">3</div><h4>Отбор</h4><p>В группу попадут те, кто настроен на результат и готов расти</p></div>
-                <div class="format-step fade-in"><div class="step-number">4</div><h4>Старт</h4><p>22 июня 2026 • 12 встреч по понедельникам • Безопасная среда</p></div>
+                <div class="format-step fade-in"><div class="step-number">4</div><h4>Старт</h4><p>30 июня 2026 • 12 встреч по вторникам • Безопасная среда</p></div>
             </div>
             <div class="format-cta fade-in">
                 <h3>Готовы трансформировать свою практику?</h3>
@@ -623,7 +492,7 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <span>© 2026 Алексей Кравцов & Анна Веселова. Все права защищены.</span>
-                <span>Онлайн-практикум • 12 недель • 22.06 → 07.09.2026</span>
+                <span>Онлайн-практикум • 12 недель • 30.06 → 15.09.2026</span>
             </div>
         </div>
     </footer>
