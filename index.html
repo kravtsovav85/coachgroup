@@ -103,6 +103,16 @@
         .program-intro { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 40px; margin-bottom: 48px; text-align: center; }
         .program-intro p { font-size: 1.05rem; color: var(--text-muted); }
         .program-intro strong { color: var(--text-dark); }
+        .time-highlight { 
+            display: inline-block; 
+            background: var(--gradient-accent); 
+            color: var(--text-dark); 
+            padding: 6px 20px; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
         .accordion { display: flex; flex-direction: column; gap: 12px; }
         .accordion-item { background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: all 0.3s ease; }
         .accordion-item:hover { box-shadow: var(--shadow-sm); }
@@ -121,8 +131,14 @@
         .meeting { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
         .meeting:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
         .meeting-title { font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; font-family: 'Inter', sans-serif; }
-        .meeting-date { font-size: 0.8rem; color: var(--accent-dark); font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+        .meeting-date { font-size: 0.8rem; color: var(--accent-dark); font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
         .meeting-date::before { content: ''; }
+        .meeting-time { 
+            background: rgba(201,169,110,0.15); 
+            padding: 2px 10px; 
+            border-radius: 50px; 
+            font-weight: 600;
+        }
         .meeting-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
         .tag { display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
         .tag-marketing { background: rgba(44,62,80,0.08); color: var(--primary); }
@@ -243,7 +259,7 @@
                 <div class="hero-meta">
                     <div class="hero-meta-item"><div class="label">Формат</div><div class="value">Онлайн</div></div>
                     <div class="hero-meta-item"><div class="label">Длительность</div><div class="value">12 недель</div></div>
-                    <div class="hero-meta-item"><div class="label">Встречи</div><div class="value">Вт, 3 часа</div></div>
+                    <div class="hero-meta-item"><div class="label">День и время</div><div class="value">Вт 18:30-21:30</div></div>
                 </div>
                 <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 24px;">📅 30.06 → 15.09.2026 • Каждый вторник</p>
                 <a href="#pricing" class="btn-primary">Записаться на бесплатную диагностику <span class="arrow">→</span></a>
@@ -352,44 +368,45 @@
             <div class="text-center">
                 <div class="section-label">Программа</div>
                 <h2 class="section-title">4 модуля глубинной трансформации</h2>
-                <p class="section-subtitle">12 встреч по вторникам: 30.06 → 15.09.2026 • 3 часа онлайн</p>
+                <p class="section-subtitle">12 встреч по вторникам: 30.06 → 15.09.2026</p>
+                <div class="time-highlight">🕐 18:30 - 21:30 (МСК)</div>
             </div>
-            <div class="program-intro fade-in"><p><strong>Формат работы:</strong> Онлайн • 12 встреч по вторникам • 3 часа в неделю • Групповая глубинная работа + конкретные маркетинговые инструменты • Запись всех встреч</p></div>
+            <div class="program-intro fade-in"><p><strong>Формат работы:</strong> Онлайн • 12 встреч по вторникам • 3 часа в неделю • <strong>Время: 18:30-21:30</strong> • Групповая глубинная работа + конкретные маркетинговые инструменты • Запись всех встреч</p></div>
             <div class="accordion">
                 <!-- MODULE 1 -->
                 <div class="accordion-item active">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">01</div><h3>Фундамент и Идентичность</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body" style="max-height: 800px;"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 1: Постановка целей и исследование скрытых мотивов</div><div class="meeting-date">30 июня 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">SMART-цели, декомпозиция финансового и профессионального плана. Разделение истинных желаний и навязанных интроектов. Исследование страха успеха и бессознательных выгод «оставаться маленьким».</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 2: Позиционирование и синдром самозванца</div><div class="meeting-date">7 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Поиск суперсилы, формулирование позиционирования. Кризис профессиональной идентичности. Работа с внутренним критиком и легализация текущего опыта.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 3: Целевая аудитория и зеркальные проекции</div><div class="meeting-date">14 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Сегментация ЦА, анализ болей, CustDev. Бессознательный выбор клиентов: кого мы притягиваем и как это связано с нашими внутренними темами и точками роста.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 1: Постановка целей и исследование скрытых мотивов</div><div class="meeting-date">30 июня 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">SMART-цели, декомпозиция финансового и профессионального плана. Разделение истинных желаний и навязанных интроектов. Исследование страха успеха и бессознательных выгод «оставаться маленьким».</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 2: Позиционирование и синдром самозванца</div><div class="meeting-date">7 июля 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Поиск суперсилы, формулирование позиционирования. Кризис профессиональной идентичности. Работа с внутренним критиком и легализация текущего опыта.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 3: Целевая аудитория и зеркальные проекции</div><div class="meeting-date">14 июля 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Сегментация ЦА, анализ болей, CustDev. Бессознательный выбор клиентов: кого мы притягиваем и как это связано с нашими внутренними темами и точками роста.</div></div>
                     </div></div>
                 </div>
                 <!-- MODULE 2 -->
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">02</div><h3>Продукт, Деньги и Ценность</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 4: Продуктовая линейка и границы форматов</div><div class="meeting-date">21 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Путь клиента. Создание лид-магнитов и пакетов услуг. Страх долгосрочных обязательств. Как продуктовая линейка отражает личные границы.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 5: Психология ценообразования</div><div class="meeting-date">28 июля 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Анализ рынка, расчёт стоимости часа. Стыд брать деньги за «помощь». Проработка установок бедности и убеждения «я должен спасать бесплатно».</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 6: Этичные продажи без спасательства</div><div class="meeting-date">4 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Упаковка УТП. Сценарии продающих сессий без давления. Треугольник Карпмана в продажах. Переход к позиции «Взрослый–Взрослый».</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 4: Продуктовая линейка и границы форматов</div><div class="meeting-date">21 июля 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Путь клиента. Создание лид-магнитов и пакетов услуг. Страх долгосрочных обязательств. Как продуктовая линейка отражает личные границы.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 5: Психология ценообразования</div><div class="meeting-date">28 июля 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Анализ рынка, расчёт стоимости часа. Стыд брать деньги за «помощь». Проработка установок бедности и убеждения «я должен спасать бесплатно».</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 6: Этичные продажи без спасательства</div><div class="meeting-date">4 августа 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Упаковка УТП. Сценарии продающих сессий без давления. Треугольник Карпмана в продажах. Переход к позиции «Взрослый–Взрослый».</div></div>
                     </div></div>
                 </div>
                 <!-- MODULE 3 -->
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">03</div><h3>Проявленность и Коммуникация</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 7: Площадки, визуал и страх видимости</div><div class="meeting-date">11 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Выбор каналов продвижения. Работа с «Тенью» в публичном поле. Страх осуждения коллег. Легализация права занимать место в пространстве.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 8: Контентная стратегия и границы самораскрытия</div><div class="meeting-date">18 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Матрица контента: баланс продающего, экспертного и личного. Где граница между искренностью и стриптизом? Работа со страхом уязвимости.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 9: Мероприятия, конкуренция и авторитет</div><div class="meeting-date">25 августа 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Продвижение через события и коллаборации. Проекция авторитета. Работа с завистью к коллегам. Трансформация конкуренции в партнёрство.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 7: Площадки, визуал и страх видимости</div><div class="meeting-date">11 августа 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Выбор каналов продвижения. Работа с «Тенью» в публичном поле. Страх осуждения коллег. Легализация права занимать место в пространстве.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 8: Контентная стратегия и границы самораскрытия</div><div class="meeting-date">18 августа 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Матрица контента: баланс продающего, экспертного и личного. Где граница между искренностью и стриптизом? Работа со страхом уязвимости.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 9: Мероприятия, конкуренция и авторитет</div><div class="meeting-date">25 августа 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Продвижение через события и коллаборации. Проекция авторитета. Работа с завистью к коллегам. Трансформация конкуренции в партнёрство.</div></div>
                     </div></div>
                 </div>
                 <!-- MODULE 4 -->
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)"><div class="accordion-header-left"><div class="module-number">04</div><h3>Устойчивость, Масштаб и Запуск</h3></div><div class="accordion-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></div></div>
                     <div class="accordion-body"><div class="accordion-body-inner">
-                        <div class="meeting"><div class="meeting-title">Встреча 10: Устойчивость к критике и контейнирование</div><div class="meeting-date">1 сентября 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Управление репутацией. Как справляться с хейтом. Разделение личности и интернет-образа. Навык самоподдержки при запусках.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 11: Делегирование и профилактика выгорания</div><div class="meeting-date">8 сентября 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Тайм-менеджмент. Найм команды. Фантазия о всемогуществе. Вторичные выгоды выгорания. Право на отдых.</div></div>
-                        <div class="meeting"><div class="meeting-title">Встреча 12: Выпускной — Защита стратегий</div><div class="meeting-date">15 сентября 2026, вторник</div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Презентация готовой связки: позиционирование, продукт, цены, план. Групповая обратная связь. Проживание сепарации с группой.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 10: Устойчивость к критике и контейнирование</div><div class="meeting-date">1 сентября 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Управление репутацией. Как справляться с хейтом. Разделение личности и интернет-образа. Навык самоподдержки при запусках.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 11: Делегирование и профилактика выгорания</div><div class="meeting-date">8 сентября 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Тайм-менеджмент. Найм команды. Фантазия о всемогуществе. Вторичные выгоды выгорания. Право на отдых.</div></div>
+                        <div class="meeting"><div class="meeting-title">Встреча 12: Выпускной — Защита стратегий</div><div class="meeting-date">15 сентября 2026, вторник <span class="meeting-time">18:30-21:30</span></div><div class="meeting-tags"><span class="tag tag-marketing">Маркетинг</span><span class="tag tag-psychodynamics">Психодинамика</span></div><div class="meeting-content">Презентация готовой связки: позиционирование, продукт, цены, план. Групповая обратная связь. Проживание сепарации с группой.</div></div>
                     </div></div>
                 </div>
             </div>
@@ -428,7 +445,7 @@
                 <div class="format-step fade-in"><div class="step-number">1</div><h4>Заявка</h4><p>Напишите в Telegram или Макс — выберите удобный способ связи</p></div>
                 <div class="format-step fade-in"><div class="step-number">2</div><h4>Диагностика</h4><p>20-минутная сессия с ведущими — знакомство и обсуждение запроса</p></div>
                 <div class="format-step fade-in"><div class="step-number">3</div><h4>Отбор</h4><p>В группу попадут те, кто настроен на результат и готов расти</p></div>
-                <div class="format-step fade-in"><div class="step-number">4</div><h4>Старт</h4><p>30 июня 2026 • 12 встреч по вторникам • Безопасная среда</p></div>
+                <div class="format-step fade-in"><div class="step-number">4</div><h4>Старт</h4><p>30 июня 2026 • 12 встреч по вторникам 18:30-21:30 • Безопасная среда</p></div>
             </div>
             <div class="format-cta fade-in">
                 <h3>Готовы трансформировать свою практику?</h3>
@@ -452,7 +469,7 @@
             <div class="pricing-grid">
                 <div class="pricing-card fade-in">
                     <h3>Базовый</h3><div class="price">55 000 ₽</div>
-                    <ul class="pricing-features"><li>12 онлайн-встреч по 3 часа</li><li>Рабочая тетрадь с алгоритмами</li><li>Запись всех встреч</li><li>Групповая работа и обратная связь</li><li>Доступ в общий чат участников</li></ul>
+                    <ul class="pricing-features"><li>12 онлайн-встреч по 3 часа (18:30-21:30)</li><li>Рабочая тетрадь с алгоритмами</li><li>Запись всех встреч</li><li>Групповая работа и обратная связь</li><li>Доступ в общий чат участников</li></ul>
                     <a href="https://t.me/Anna_Rosso" class="btn-primary" target="_blank">Выбрать тариф <span class="arrow">→</span></a>
                 </div>
                 <div class="pricing-card featured fade-in">
@@ -492,7 +509,7 @@
             <div class="footer-divider"></div>
             <div class="footer-bottom">
                 <span>© 2026 Алексей Кравцов & Анна Веселова. Все права защищены.</span>
-                <span>Онлайн-практикум • 12 недель • 30.06 → 15.09.2026</span>
+                <span>Онлайн-практикум • 12 недель • 30.06 → 15.09.2026 • 18:30-21:30</span>
             </div>
         </div>
     </footer>
